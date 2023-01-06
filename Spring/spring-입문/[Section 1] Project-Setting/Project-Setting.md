@@ -84,6 +84,8 @@ Hello
     - [https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines) (2.7.7 쪽은 같은 내용의 컨텐츠를 찾지 못했다.)
     - **이것을 사용해보는 것이 좋은 이유는 spring 사이트의 매뉴얼에서 필요한 것을 검색해서 사용할 줄 알아야 하기 때문이다!**
 
+<br>
+
 ### thymeleaf 템플릿 엔진
 
 - thymeleaf 공식 사이트: [https://www.thymeleaf.org/](https://www.thymeleaf.org/)
@@ -91,12 +93,16 @@ Hello
 - 스프링부트 매뉴얼: [https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines](https://docs.spring.io/spring-boot/docs/2.3.1.RELEASE/reference/html/spring-boot-features.html#boot-features-spring-mvc-template-engines)
 - 스프링부트의 Template Engines 중 하나가 thymeleaf이다.
 
+<br>
+
 **thymeleaf 템플릿 엔진 동작 확인**
 
 - 실행: http://localhost:8080/hello
 
+<br>
+
 **동작 환경**
-![김영한 스프링 입문 - 1강](https://user-images.githubusercontent.com/79316402/210871318-c45b9b79-2c58-4446-a548-3f8bca116652.png)
+![김영한 스프링 입문 - 1강](https://user-images.githubusercontent.com/79316402/211053311-da9dc881-1e57-4581-8227-41f9c8cf03d3.png)
 
 
 - 컨트롤러에서 리턴 값으로 문자를 반환하면 뷰 리졸버(`viewResolver`)가 화면을 찾아서 처리한다.
@@ -105,6 +111,8 @@ Hello
 
 > 참고: `spring-boot-devtools` 라이브러리를 추가하면, `html` 파일을 컴파일만 해주면 서버 재시작 없이 View 파일 변경이 가능하다. 
 인텔리J 컴파일 방법: 메뉴 build → Recompile
+
+<br>
 
 ## ✅빌드하고 실행하기
 **콘솔로 이동(directory는 프로젝트 폴더로 이동한다.)**
