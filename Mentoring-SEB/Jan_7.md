@@ -233,7 +233,12 @@ Spring Boot(내장 Tomcat 웹 서버)의 경우 멀티 스레드 방식으로 �
 2. Comparable은 객체를 정렬하기 위해 사용하는데, String 클래스에서도 정렬을 하는 기능이 포함되기 때문에 사용한다.
 3. String 객체는 charSequence를 구현하여 문자열의 형태를 만드는 것이기 때문에 필요하다.
 
-### 7-3. String 클래스의 구조는?(미작성)
+### 7-3. String 클래스의 구조는?
+
+- String 클래스는 Object 클래스의 자식 클래스이면서 Serializable, Comparable<String>, charSequence 인터페이스를 구현한다.
+- String의 생성 방식
+  - literal 방식: String 변수에 직접 "문자열"을 넣게 되면 Heap 메모리 내에 String pool이라는 곳에 저장되고, 해당 문자열의 주소가 String 변수에 저장된다. 그래서 동일한 문자열은 동일한 메모리 주소를 가지게 되는 것이다.
+  - new 키워드 방식: 
 
 ### 7-4. charSequence가 왜 인터페이스로 구현돼 있을까?
 
