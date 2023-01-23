@@ -237,8 +237,9 @@ Spring Boot(내장 Tomcat 웹 서버)의 경우 멀티 스레드 방식으로 �
 
 - String 클래스는 Object 클래스의 자식 클래스이면서 Serializable, Comparable<String>, charSequence 인터페이스를 구현한다.
 - String의 생성 방식
-  - literal 방식: String 변수에 직접 "문자열"을 넣게 되면 Heap 메모리 내에 String pool이라는 곳에 저장되고, 해당 문자열의 주소가 String 변수에 저장된다. 그래서 동일한 문자열은 동일한 메모리 주소를 가지게 되는 것이다.
-  - new 키워드 방식: 
+  - literal 방식: String 변수에 직접 "문자열"을 넣게 되면 Heap 메모리 내에 String pool이라는 곳에 저장되고, 해당 문자열의 주소가 String 변수에 저장된다. HashMap 형태로 저장되기 때문에 동일한 문자열은 동일한 메모리 주소를 가지게 되는 것이다.
+  - new 키워드 방식: 변수는 stack 영역에 생성되지만 생성된 문자열은 Heap 영역에 객체가 반복적으로 생성된다. 
+  - String 클래스는 char 타입의 배열 형태로 저장되는데, 이는 컴퓨터가 인식하는 0과 1(bit단위)로 변환하기 위해 유니코드(2byte 문자체계)를 사용하는 char 형으로 변환해서 저장되는 것이다. 
 
 ### 7-4. charSequence가 왜 인터페이스로 구현돼 있을까?
 
