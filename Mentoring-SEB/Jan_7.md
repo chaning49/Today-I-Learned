@@ -226,6 +226,8 @@ Spring Boot(내장 Tomcat 웹 서버)의 경우 멀티 스레드 방식으로 �
 ### 7-1. equals의 파라미터가 왜 Object인지?
 
 - 최상위 클래스인 Object 클래스에 equals가 이미 구현되어 있다. Object 클래스에 구현된 equals메서드는 두 개의 참조변수가 같은 객체를 참조하고 있는지만 판단할 수 있기 때문에 String 클래스에서 오버라이딩하여 재정의하기 때문에 파라미터는 Object 타입인 것이다.
+  
+<br>
 
 ### 7-2. 인터페이스가 3개인 이유?
 
@@ -233,6 +235,8 @@ Spring Boot(내장 Tomcat 웹 서버)의 경우 멀티 스레드 방식으로 �
 2. Comparable은 객체를 정렬하기 위해 사용하는데, String 클래스에서도 정렬을 하는 기능이 포함되기 때문에 사용한다.
 3. String 객체는 charSequence를 구현하여 문자열의 형태를 만드는 것이기 때문에 필요하다.
 
+<br>
+  
 ### 7-3. String 클래스의 구조는?
 
 - String 클래스는 Object 클래스의 자식 클래스이면서 Serializable, Comparable<String>, charSequence 인터페이스를 구현한다.
@@ -257,6 +261,8 @@ Spring Boot(내장 Tomcat 웹 서버)의 경우 멀티 스레드 방식으로 �
     
   이러한 문제를 해결하기 위해 StringBuffer와 StringBuilder가 생겼다. 이 클래스들은 append를 이용하여 문자열을 결합해주는데 메모리 주소를 하나만 사용할 수 있다. ~이어서 작성(StringBuffer와 StringBuilder의 차이)
 
+<br>
+
 ### 7-4. charSequence가 왜 인터페이스로 구현돼 있을까?
 
 - charSequence는 문자의 시퀀스를 나타내는 인터페이스로 String이 charSequence를 직접 구현하는 구현체로서의 역할을 수행하기 때문이다.
@@ -270,3 +276,9 @@ Spring Boot(내장 Tomcat 웹 서버)의 경우 멀티 스레드 방식으로 �
   - Deserializable(byte 타입 → Object or Data)
     byte로 변환된 Data를 원래대로 Object나 Data로 변환하는 기술을 역직렬화(Deserialize)라고 한다.
     직렬화된 바이트 형태의 데이터를 객체로 변환해서 JVM으로 상주시키는 형태이다.
+
+<br>
+### 8. JPA란?
+- JPA(Java Persistence API)는 Java 진영에서 사용하는 ORM(Object-Relational Mapping) 기술의 표준 사양(또는 명세, Specification)이다.
+  
+
