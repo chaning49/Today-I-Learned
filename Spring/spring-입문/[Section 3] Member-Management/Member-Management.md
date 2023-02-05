@@ -87,7 +87,7 @@ import java.util.*;
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>(); // 실제 개발을 할 때는 동시성 문제가 있어서 공유되는 변수인 경우 ConcurrentHashMap을 사용한다.
-    private static long sequence = 0L; // 동시성 문제를 고려하면 AtoimicLong 사용
+    private static long sequence = 0L; // 키 값을 생성해주기 위한 변수, 동시성 문제를 고려하면 AtoimicLong 사용
 
     @Override
     public Member save(Member member) {
@@ -105,7 +105,7 @@ public class MemoryMemberRepository implements MemberRepository{
     public Optional<Member> findByName(String name) {
         return store.values().stream()
                 .filter(member -> member.getName().equals(name))
-                .findAny();
+                .findAny(); // 하나라도 있으면 찾는다.
     }
 
     @Override
