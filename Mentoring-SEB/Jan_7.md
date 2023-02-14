@@ -281,5 +281,11 @@ Spring Boot(내장 Tomcat 웹 서버)의 경우 멀티 스레드 방식으로 �
 
 ### 8. JPA란?
 - JPA(Java Persistence API)는 Java 진영에서 사용하는 ORM(Object-Relational Mapping) 기술의 표준 사양(또는 명세, Specification)이다. 데이터 액세스 계층의 상단에 위치하고 있다. 데이터 저장, 조회 등의 작업은 JPA를 거쳐 JPA의 구현체인 Hibernate ORM(직접 사용한 JPA의 구현체입니다.)을 통해서 이루어지며 Hibernate ORM은 내부적으로 JDBC API를 이용해서 데이터베이스에 접근한다.
+ 
+- JPA에서는 테이블과 매핑되는 엔티티 객체 정보를 영속성 컨텍스트(Persistence Context)라는 곳에 보관해서 애플리케이션 내에서 오래 지속 되도록 한다.
   
 ![김영한의 스프링 입문-014](https://user-images.githubusercontent.com/79316402/217281930-76a22a9e-e67f-4514-8b3f-3bbee049eb1e.png)
+
+<br>
+
+- 
